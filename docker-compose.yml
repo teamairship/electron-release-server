@@ -3,19 +3,20 @@ services:
   web:
     build: .
     environment:
-      APP_USERNAME: username
-      APP_PASSWORD: password
+      APP_USERNAME: airship
+      APP_PASSWORD: Airship123!!
       DB_HOST: db
       DB_PORT: 5432
       DB_USERNAME: releaseserver
       DB_NAME: releaseserver
       DB_PASSWORD: secret
-      TOKEN_SECRET: change_me_in_production
-      APP_URL: 'localhost:5000'
+      TOKEN_SECRET: 48f399539008689c4fa46e115bd6a212
+      APP_URL: 'http://ec2-52-5-70-224.compute-1.amazonaws.com'
+      NODE_ENV: 'production'
     depends_on:
       - db
     ports:
-      - '5000:80'
+      - '80:80'
     entrypoint: ./scripts/wait.sh db:5432 -- npm start
   db:
     image: postgres

@@ -12,7 +12,7 @@ services:
       DB_NAME: releaseserver
       DB_PASSWORD: secret
       TOKEN_SECRET: 48f399539008689c4fa46e115bd6a212
-      APP_URL: 'http://ec2-52-5-70-224.compute-1.amazonaws.com'
+      APP_URL: 'http://ec2-54-157-162-88.compute-1.amazonaws.com'
       NODE_ENV: 'production'
     depends_on:
       - db

@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     #build: .
-    image: 766499293607.dkr.ecr.us-east-1.amazonaws.com/electron-release-server_web
+    image: 554456905959.dkr.ecr.us-east-1.amazonaws.com/electron-release-server
     environment:
       APP_USERNAME: airship
       APP_PASSWORD: Airship123!!
@@ -12,7 +12,7 @@ services:
       DB_NAME: releaseserver
       DB_PASSWORD: secret
       TOKEN_SECRET: 48f399539008689c4fa46e115bd6a212
-      APP_URL: 'http://ec2-52-5-70-224.compute-1.amazonaws.com'
+      APP_URL: 'http://54.210.92.21'
       NODE_ENV: 'production'
     depends_on:
       - db
